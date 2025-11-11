@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><b>Climate</b></h1>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Loading weather...</p>
+    </div>
+
+    <div id="error" class="error hidden">City not found. Try again.</div>
+
+    <section id="currentWeather" class="weather-section hidden">
+      <h2 id="cityName"></h2>
+      <div class="current-info">
+        <img id="weatherIcon" alt="Weather Icon" />
+        <div>
+          <p id="temperature"></p>
+          <p id="description"></p>
+          <p id="humidity"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast" class="forecast hidden">
+      <h2>3-Day Forecast</h2>
+      <div id="forecastCards" class="forecast-cards"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
